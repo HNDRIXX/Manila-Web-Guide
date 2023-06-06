@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MODULE3</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    html, body{
+        overflow-x: hidden;
+
+        background-image: linear-gradient(to right, #2F5D62 , #A7C4BC);
+    }
+    
+    p span{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 100px;
+    }
+
+    .container p{
+        float: left;
+        width: 440px;
+        margin: 45px;
+        font-size: 1em;
+        padding-top: 20px;
+        text-align: center;
+
+    }
+
+    .container{
+        overflow-x: hidden;
+
+        background: #def2f5;
+        width: 1300px;
+        height: 93vh;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+        user-select: none;
+        transition: ease all .5s;
+    }
+
+    .imageClip {
+        overflow-x: hidden;
+
+        position: absolute;
+        right: -60px;
+        width: 800px;
+        height: 93vh;
+        transform: skew(20deg);
+        -ms-transform: skew(40deg);
+        -webkit-transform: skew(8deg); 
+    }
+
+    .image{
+        overflow-x: hidden;
+        transition: 500s;
+
+        animation-name: gumagalaw;
+        animation-duration: 70s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+
+        background-size: cover;
+        position: absolute;
+        right: 60px;
+        width: 100%;
+        height: 100%;
+        transform: skew(-30deg);
+        -webkit-transform: skew(-8deg);
+    }
+
+    @keyframes gumagalaw{
+        0%, 10%, 100%{
+            background-image: url(image/fsantiago/fort1.jpg);
+        }
+        15%, 20%, 25%{
+            background-image: url(image/fsantiago/fort2.jpg);
+        }
+        30%, 40%, 45%{
+            background-image: url(image/fsantiago/fort3.jpg);
+        }
+        50%, 60%, 65%{
+            background-image: url(image/fsantiago/fort2.jpg);
+        }
+        70%, 85%{
+            background-image: url(image/fsantiago/fort3.jpg);
+        }
+    }
+
+    div.preload-images {
+        background: url(image/fsantiago/fort1.jpg) no-repeat -9999px -9999px;
+        background: url(image/fsantiago/fort1.jpg) no-repeat -9999px -9999px,
+        url(image/fsantiago/fort2.jpg) no-repeat -9999px -9999px,
+        url(image/fsantiago/fort3.jpg) no-repeat -9999px -9999px;
+    }
+</style>
+<body>
+    <div class="preload-images"></div>
+    <div class="container">
+        <p><span>Fort Santiago</span>
+        <br>Fort Santiago and its beautifully manicured gardens on the Pasig River's bank is one of Intramuros' most popular tourist attractions, providing a welcome respite from the hustle and bustle of the metropolis. The citadel, which was established by the Spaniards and now features gardens, plazas, fountains, and a lily pond was originally built by the Spanish in 1590. 
+        One of the famous monument in Fort Santiago that you should visit is the Rizal Shrine museum, it has exhibits on Philippines' national hero Dr. José Rizal, who was killed by the Spanish in 1896 for being one of the leaders of the Philippine Revolution. A replica of his cell and the courtroom where his trial took place found in Fort Santiago. <br>
+
+        <br>Fort santiago is a good place to visit because this remains as one of the most notable and important historical sites in the Philippines, you will not only enjoy the scenery but you will also learn more about the past.  <br>
+        
+        </p>
+    
+        <div class="imageClip">
+            <div class="image"></div> 
+        </div> 
+
+    </div>
+</body>
+</html>

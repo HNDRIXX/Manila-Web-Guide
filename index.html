@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>MODULE1</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+        user-select: none;
+    }
+
+    body{
+        transition: ease all .3s;
+        background: #000000;
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow-x: hidden;
+        transition: 50s;
+
+        animation-name: gumagalaw;
+        animation-duration: 100s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes gumagalaw{
+        0%, 10%, 100%{
+            background-image: url(image/home/intra.jpg);
+        }
+        15%, 20%, 25%{
+            background-image: url(image/home/ugbo.jpg);
+        }
+        30%, 40%, 45%{
+            background-image: url(image/home/MNL.jpg);
+        }
+        50%, 60%, 65%{
+            background-image: url(image/home/MNL1.jpg);
+        }
+        70%, 85%{
+            background-image: url(image/home/MNL3.jpg);
+        }
+    }
+
+    .welcome {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-weight: bolder;
+        color: #fff;
+        text-align: center; 
+    }
+
+    .welcome p{
+        font-size: 40px;
+        font-weight: bolder;
+        width: 100vw;
+    }
+
+    .button{
+        width: 200px;
+        height: 8vh;
+        margin-top: 15px;
+        position: relative;
+        background-color: #6e9887;
+        text-decoration: none;
+        
+        color: #fff;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+    }
+
+    .welcome button:hover{
+        transition: all .2s ease-in;
+        cursor: pointer;
+        background-color: #578578;
+    }
+
+    div.preload-images {
+        background: url(image/home/intra.jpg) no-repeat -9999px -9999px;
+        background: url(image/home/intra.jpg) no-repeat -9999px -9999px,
+        url(image/home/ugbo.jpg) no-repeat -9999px -9999px,
+        url(image/home/MNL.jpg) no-repeat -9999px -9999px,
+        url(image/home/MNL1.jpg) no-repeat -9999px -9999px,
+        url(image/home/MNL3.jpg) no-repeat -9999px -9999px;
+    }
+
+    @media screen and (max-width: 600px){
+        body{
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    }
+</style>
+<body>
+    <div class="preload-images"></div>
+
+    <div style="background-color: #fff;">
+    <div class="welcome">
+        <p>Your Best Travel Companion</p>
+        <button class="button" onclick="location.href='places.html'" type="button">EXPLORE</button>
+    </div>
+
+    <!-- <div class="midwelcome">
+        <h2>WELCOME</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus placeat sit autem aperiam, perspiciatis repellat ipsam rem maiores corporis?</p>
+    </div> -->
+    </div>
+    
+</body>
+</html>

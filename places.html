@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MODULE2</title>
+</head>
+
+<style>
+    .container{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        background-image: linear-gradient(to right, #2F5D62 , #A7C4BC);
+        font-family: 'Montserrat', sans-serif;
+        zoom: 100%;
+    }
+
+    .grid-section{
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin: 10px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+
+    .project{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        margin: 1em 0;
+        cursor: pointer;
+    }
+
+    figure{
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .project figure img{
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 300px;
+    }
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+        text-align: center;
+    }
+
+    .overlay span{
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    .overlay:hover{
+        opacity: 1;
+    }
+
+    .placetitle{
+        font-size: 2em;
+        font-weight: bolder;
+        user-select: none;
+    }
+
+    @media screen and (min-width: 960px){
+        .grid-wrapper{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: .5em;
+        }
+
+        .project:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        .project:nth-child(4){
+            grid-column: span 2;
+        }
+
+        .project:nth-child(5) {
+            grid-column: span 3;
+        }
+
+        .project:nth-child(6) {
+            grid-column: span 2;
+        }
+
+        .project:nth-child(8) {
+            grid-column: span 3;
+        }
+
+        .project:nth-child(10) {
+            grid-column: span 2;
+        }
+
+        .project {
+            width: 100%;
+            height: 300px;
+            text-decoration: none;
+            margin: 0;
+        }
+        .project figure {
+            position: relative;
+            overflow: hidden;
+        }
+        .project figure img {
+            position: relative;
+            z-index: 0;
+            transition: transform 0.4s;
+        }
+    }
+</style>
+
+<body>
+    <section class="grid-section">
+        <div class="grid-wrapper">
+            <div class="grid-container">
+                <a class="project" href="intra.html">
+                    <figure>
+                        <img src="image/intramuros/intramuros.jpg">
+
+                        <div class="overlay">
+                            <p class="placetitle">INTRAMUROS
+                                <br><span>The Walled City</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="fortsantiago.html">
+                    <figure>
+                        <img src="image/fort.jpg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">FORT SANTIAGO
+                                <br><span>Fearsome Fortress</span>
+                            </p>
+                            
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="rizalpark.html">
+                    <figure>
+                        <img src="image/rizal.jpg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">RIZAL PARK
+                                <br><span>Manila's Central Park</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="ugbo.html">
+                    <figure>
+                        <img src="image/ugbo.jpg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">UGBO
+                                <br><span>Street Food Heaven</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+                
+                <a class="project" href="barbara.html">
+                    <figure>
+                        <img src="image/barbara.jpeg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">BARBARA'S HERITAGE RESTAURANT
+                                <br><span>Authentic Filipino Cuisine</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="anthropology.html">
+                    <figure>
+                        <img src="image/anthro.jpg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">ANTHROPOLOGY
+                                <br><span>Manila Heritage Museum</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="finearts.html">
+                    <figure>
+                        <img src="image/fine.jpg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">FINE ARTS
+                                <br><span>Manila Art Museum</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="oceanpark.html">
+                    <figure>
+                        <img src="image/oceanpark.jpeg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">OCEAN PARK
+                                <br><span>World Class Oceanarium</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="robinson.html">
+                    <figure>
+                        <img src="image/robinsons.jpeg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">ROBINSONS<br>MANILA
+                                <br><span>Manila's Biggest Mall</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+
+                <a class="project" href="baywalk.html">
+                    <figure>
+                        <img src="image/baywalk.jpg">
+                        
+                        <div class="overlay">
+                            <p class="placetitle">MANILA<br>BAYWALK
+                                <br><span>Manila's Best Sunset Spot</span>
+                            </p>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

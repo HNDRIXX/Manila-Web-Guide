@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MODULE3</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    html, body{
+        overflow-x: hidden;
+
+        background-image: linear-gradient(to right, #2F5D62 , #A7C4BC);
+    }
+    
+    
+    p span{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 100px;
+    }
+
+    .container p{
+        float: left;
+        width: 440px;
+        margin: 45px;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .container{
+        overflow-x: hidden;
+
+        background: #def2f5;
+        width: 1300px;
+        height: 93vh;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+        user-select: none;
+        transition: ease all .5s;
+    }
+
+    .imageClip {
+        overflow-x: hidden;
+
+        position: absolute;
+        right: -60px;
+        width: 800px;
+        height: 93vh;
+        transform: skew(20deg);
+        -ms-transform: skew(40deg);
+        -webkit-transform: skew(8deg); 
+    }
+
+    .image{
+        overflow-x: hidden;
+        transition: 500s;
+
+        animation-name: gumagalaw;
+        animation-duration: 70s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+
+        background-size: cover;
+        position: absolute;
+        right: 60px;
+        width: 100%;
+        height: 100%;
+        transform: skew(-30deg);
+        -webkit-transform: skew(-8deg);
+    }
+
+    @keyframes gumagalaw{
+        0%, 10%, 100%{
+            background-image: url(image/robinson/robinson1.jpg);
+        }
+        15%, 20%, 25%{
+            background-image: url(image/robinson/robinson2.jpg);
+        }
+        30%, 40%, 45%{
+            background-image: url(image/robinson/robinson1.jpg);
+        }
+        50%, 60%, 65%{
+            background-image: url(image/robinson/robinson2.jpg);
+        }
+        70%, 85%{
+            background-image: url(image/robinson/robinson1.jpg);
+        }
+    }
+
+    div.preload-images {
+        background: url(image/robinson/robinson1.jpg) no-repeat -9999px -9999px;
+        background: url(image/robinson/robinson1.jpg) no-repeat -9999px -9999px,
+        url(image/robinson/robinson2.jpg) no-repeat -9999px -9999px;
+    }
+</style>
+<body>
+
+    <div class="preload-images"></div>
+    <div class="container">
+        <p><span>Robinson's Manila</span>
+        <br><br>Robinsons Place Manila is a large shopping mall located in Ermita, Manila, Philippines. It is the
+        largest Robinsons Mall ever built. <br>
+
+        <br>Modern-day atrocities of bearing the workload and grappling to and fro between the home and
+        workplace sucks the happiness out of an individual . Robinsons Place is the perfect place to
+        unwind, relax, and escape the sweltering sun. It offers a whole world full of myriad
+        entertainment options to satiate everyone’s fun quotient <br>
+        
+        </p>
+    
+        <div class="imageClip">
+            <div class="image"></div> 
+        </div> 
+
+    </div>
+</body>
+</html>

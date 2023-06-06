@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MODULE3</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    html, body{
+        overflow-x: hidden;
+
+        background-image: linear-gradient(to right, #2F5D62 , #A7C4BC);
+    }
+
+    p span{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 100px;
+    }
+
+    .container p{
+        float: left;
+        width: 440px;
+        margin: 45px;
+        font-size: 1em;
+        padding-top: 20px;
+        text-align: center;
+
+    }
+
+    .container{
+        overflow-x: hidden;
+
+        background: #def2f5;
+        width: 1300px;
+        height: 93vh;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+        user-select: none;
+        transition: ease all .5s;
+    }
+
+    .imageClip {
+        overflow-x: hidden;
+
+        position: absolute;
+        right: -60px;
+        width: 800px;
+        height: 93vh;
+        transform: skew(20deg);
+        -ms-transform: skew(40deg);
+        -webkit-transform: skew(8deg); 
+    }
+
+    .image{
+        overflow-x: hidden;
+        transition: 500s;
+
+        animation-name: gumagalaw;
+        animation-duration: 70s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+
+        background-size: cover;
+        position: absolute;
+        right: 60px;
+        width: 100%;
+        height: 100%;
+        transform: skew(-30deg);
+        -webkit-transform: skew(-8deg);
+    }
+
+    @keyframes gumagalaw{
+        0%, 10%, 100%{
+            background-image: url(image/barbara/barbara1.jpeg);
+        }
+        15%, 20%, 25%{
+            background-image: url(image/barbara/barbara2.jpeg);
+        }
+        30%, 40%, 45%{
+            background-image: url(image/barbara/barbara3.jpeg);
+        }
+        50%, 60%, 65%{
+            background-image: url(image/barbara/barbara2.jpeg);
+        }
+        70%, 85%{
+            background-image: url(image/barbara/barbara3.jpeg);
+        }
+    }
+
+    div.preload-images {
+        background: url(image/barbara/barbara1.jpeg) no-repeat -9999px -9999px;
+        background: url(image/barbara/barbara1.jpeg) no-repeat -9999px -9999px,
+        url(image/barbara/barbara2.jpeg) no-repeat -9999px -9999px,
+        url(image/barbara/barbara3.jpeg) no-repeat -9999px -9999px;
+    }
+</style>
+<body>
+    <div class="preload-images"></div>
+    <div class="container">
+        <p><span>Barbaras Heritage</span>
+        <br>Barbara's Heritage Restaurant offers a conglomeration of cultures as it serves Filipino dishes
+        with Spanish, Indian, and Chinese influences. The Seafood Amelie, Pastel de Lengua, Roast
+        Beef, and Turon are just some of the dishes that made Barbara’s a culinary landmark in
+        Intramuros. <br>
+
+        <br>Barbara’s Heritage Restaurant will let every visitors experience dining like an Illustrado during
+        the Spanish era. With its ambience and the cultural shows entitled Kultura Filipina every night,
+        Barbara’s is distinct from other restaurants in Intramuros. Through the heirloom recipes, intricate
+        interior designs, and lively Filipino traditional entertainment, this restaurant not only keep the
+        Filipino heritage intact but also let the world get a taste of it. <br>
+    
+        </p>
+    
+        <div class="imageClip">
+            <div class="image"></div> 
+        </div> 
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MODULE3</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    html, body{
+        overflow-x: hidden;
+
+        background-image: linear-gradient(to right, #2F5D62 , #A7C4BC);
+    }
+    
+    p span{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 100px;
+    }
+
+    .container p{
+        float: left;
+        width: 440px;
+        margin: 45px;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .container{
+        overflow-x: hidden;
+
+        background: #def2f5;
+        width: 1300px;
+        height: 93vh;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+        user-select: none;
+        transition: ease all .5s;
+    }
+
+    .imageClip {
+        overflow-x: hidden;
+
+        position: absolute;
+        right: -60px;
+        width: 800px;
+        height: 93vh;
+        transform: skew(20deg);
+        -ms-transform: skew(40deg);
+        -webkit-transform: skew(8deg); 
+    }
+
+    .image{
+        overflow-x: hidden;
+        transition: 500s;
+
+        animation-name: gumagalaw;
+        animation-duration: 70s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+
+        background-size: cover;
+        position: absolute;
+        right: 60px;
+        width: 100%;
+        height: 100%;
+        transform: skew(-30deg);
+        -webkit-transform: skew(-8deg);
+    }
+
+    @keyframes gumagalaw{
+        0%, 10%, 100%{
+            background-image: url(image/oceanpark/ocean1.jpg);
+        }
+        15%, 20%, 25%{
+            background-image: url(image/oceanpark/ocean2.jpg);
+        }
+        30%, 40%, 45%{
+            background-image: url(image/oceanpark/ocean3.jpg);
+        }
+        50%, 60%, 65%{
+            background-image: url(image/oceanpark/ocean2.jpg);
+        }
+        70%, 85%{
+            background-image: url(image/oceanpark/ocean3.jpg);
+        }
+    }
+
+    div.preload-images {
+        background: url(image/oceanpark/ocean1.jpg) no-repeat -9999px -9999px;
+        background: url(image/oceanpark/ocean1.jpg) no-repeat -9999px -9999px,
+        url(image/oceanpark/ocean2.jpg) no-repeat -9999px -9999px,
+        url(image/oceanpark/ocean3.jpg) no-repeat -9999px -9999px;
+    }
+</style>
+<body>
+    <div class="preload-images"></div>
+    <div class="container">
+        <p><span>Ocean Park</span>
+        <br>Manila Ocean Park is an oceanarium in Manila and Philippine's first world-class marine theme
+        park and a premiere educational facility. It is home to 14,000 sea creatures from 277 species
+        which are all indigenous to the Philippines and South East Asia. <br>
+
+        <br>Manila Ocean Park hosts an array of exciting attractions, enticing view of the bay, enriching
+        marine life exhibits, entertaining dining and lifestyle shapes to mold into an integrated resort
+        destination. <br>
+        
+        <br>In the evening, lovers, young and old, will discover a romantic environment as well as peace within the park's surroundings. There are numerous attractions within the park, and it takes at least a day to completely explore and appreciate them all. 
+        </p>
+    
+        <div class="imageClip">
+            <div class="image"></div> 
+        </div> 
+
+    </div>
+</body>
+</html>
