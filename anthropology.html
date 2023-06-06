@@ -23,7 +23,42 @@
 
         background-image: linear-gradient(to right, #2F5D62 , #A7C4BC);
     }
+    
+    header{
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+    }
 
+    #back{
+        background-color: #fff;
+        border-radius: 0px 0px 120px;
+        box-shadow: 2px 10px 10px;
+        border: none;
+        width: 100px;
+        height: 90px;
+        padding-right: 25px;
+        padding-bottom: 20px;
+        outline: none;
+        transition: ease-in-out .10s;
+    }
+
+    #back i{
+        color: #2b575c ;
+        font-size: 40px;
+        font-weight: bolder;
+        overflow-y: hidden;
+    }
+
+    #back:hover{
+        width: 110px;
+        height: 100px;
+        transition: ease all .10s;
+        border: none;
+        outline: none;
+    }
+    
     p span{
         font-size: 30px;
         font-weight: 700;
@@ -60,7 +95,8 @@
         height: 93vh;
         transform: skew(20deg);
         -ms-transform: skew(40deg);
-        -webkit-transform: skew(8deg); 
+        -webkit-transform: skew(8deg);
+        box-shadow: 5px 40px 20px;       
     }
 
     .image{
@@ -106,8 +142,116 @@
         url(image/anthropology/anthro2.jpg) no-repeat -9999px -9999px,
         url(image/anthropology/anthro3.jpg) no-repeat -9999px -9999px;
     }
+
+    .map{
+        user-select: none;
+        width: 1300px;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        transition: ease all .5s;
+    }
+
+    .location {
+        color: #fff;
+        font-size: 30px;
+        background-color: #1f4347;
+        padding: 20px;
+        width: 1300px;
+        margin: auto;
+        margin-top: 10px;
+        text-align: center;
+        transition: ease all .5s;
+    }
+
+    @media screen and (max-width: 1250px){
+        .map, .location{
+            width: 96vw;
+            height: 100%;
+            margin-bottom: 15px;
+        }
+
+        .container{
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            
+            animation-name: gumagalaw;
+            animation-duration: 70s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+
+
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 96vw;
+            height: 100%;
+            user-select: none;
+            margin-bottom: 15px;
+        }
+
+        .container p{
+            background: #00000091;
+
+            color: #ffff;
+            font-size: 1em;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            padding: 5rem;
+            margin: 0 auto;
+        }
+
+        p span{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .imageClip{
+            display: none;
+        }
+
+        @media screen and (max-height: 700px){
+            .container p {
+                width: auto;
+                height: auto;
+                padding-top: 12px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        .map, .location{
+            width: 95vw;
+            height: 100%;
+        }
+
+        .container{
+            width: 95vw;
+            height: 100%;
+        }
+
+        .container p{
+            background: #00000091;
+            
+            color: #ffff;
+            font-size: 1em;
+            text-align: center;
+            padding: 3rem;
+            padding-bottom: 16rem;
+            margin: 0 auto;
+        }
+    }
 </style>
 <body>
+    <header>
+        <button id="back" onclick="history.back()" type="button"><i class="glyphicon glyphicon-menu-left"></i></button>
+    </header>
+
     <div class="preload-images"></div>
     <div class="container">
         <p><span>Anthropology</span>
@@ -122,7 +266,13 @@
         <div class="imageClip">
             <div class="image"></div> 
         </div> 
+    </div>
 
+    <div class="location">
+        <span>LOCATION</span>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2349101629075!2d120.97897771432022!3d14.585685981353551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c96f4c676f4d%3A0xd0bc19170c93227b!2sNational%20Museum%20of%20Anthropology!5e0!3m2!1sen!2sph!4v1638802198540!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </body>
 </html>
